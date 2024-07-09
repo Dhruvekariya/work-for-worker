@@ -10,7 +10,9 @@ import { useEffect } from 'react';
 
 export default function DisplayJobs() {
     const dispatch = useDispatch();
-  const JobData = useSelector((state) => state?.Job?.JobData);
+  const JobData = useSelector(null);
+
+    // (state) => state?.Job?.JobData
 
    const { data, error, isLoading } = useSWR("/getAllJobs", () =>
      get_job()
