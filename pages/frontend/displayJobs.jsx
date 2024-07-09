@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 
 export default function DisplayJobs() {
     const dispatch = useDispatch();
-  const JobData = useSelector(null);
+  const JobData = useSelector((state) => state?.Job?.JobData);
 
     // (state) => state?.Job?.JobData
 
